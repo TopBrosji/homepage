@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>David Sundt - Web Developer & Designer</title>
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        header, footer {
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        header {
+            padding: 100px 0;
+        }
+        .background-animation {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #3498db, #2c3e50, #3498db, #2c3e50);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+        }
+        @keyframes gradientBG {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 10px 0;
+        }
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 15px;
+        }
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+        }
+        section {
+            margin: 40px 0;
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        h2 {
+            color: #2c3e50;
+        }
+        .skill {
+            background-color: #3498db;
+            color: white;
+            padding: 10px;
+            margin: 5px;
+            border-radius: 5px;
+            display: inline-block;
+        }
+        .project {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-bottom: 30px;
+            border-radius: 10px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        .project h3 {
+            color: #2c3e50;
+            margin-top: 0;
+        }
+        .project-image {
+            width: 100%;
+            height: 200px;
+            background-color: #ddd;
+            background-size: cover;
+            background-position: center;
+            border-radius: 5px;
+            margin-bottom: 15px;
+        }
+        .project-tags {
+            margin-top: 10px;
+        }
+        .project-tag {
+            background-color: #3498db;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-right: 5px;
+        }
+        .project-links {
+            margin-top: 15px;
+        }
+        .project-links a {
+            display: inline-block;
+            margin-right: 10px;
+            color: #3498db;
+            text-decoration: none;
+        }
+        .project-links a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            padding: 20px 0;
+            margin-top: 40px;
+        }
+        .skills-tab {
+            background-color: #3498db;
+            color: white;
+            padding: 10px 20px;
+            position: fixed;
+            right: -200px;
+            top: 50%;
+            transform: translateY(-50%);
+            border-radius: 10px 0 0 10px;
+            cursor: pointer;
+            transition: right 0.3s ease;
+            z-index: 1000;
+        }
+        .skills-tab.open {
+            right: 0;
+        }
+        .skills-content {
+            width: 200px;
+        }
+        .skill-item {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-name {
+            flex: 1;
+        }
+        .skill-level {
+            width: 100px;
+            height: 10px;
+            background-color: rgba(255,255,255,0.3);
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skill-progress {
+            height: 100%;
+            background-color: #2c3e50;
+            width: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="background-animation"></div>
+        <h1>David Sundt</h1>
+        <p>Web Developer & Designer</p>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Hello! I'm David Sundt, a passionate web developer and designer with a keen eye for detail and a love for creating beautiful, functional websites. With years of experience in the field, I specialize in crafting user-friendly interfaces and robust backend solutions.</p>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skill">HTML5</div>
+            <div class="skill">CSS3</div>
+            <div class="skill">JavaScript</div>
+            <div class="skill">React</div>
+            <div class="skill">Node.js</div>
+            <div class="skill">Python</div>
+            <div class="skill">SQL</div>
+            <div class="skill">Git</div>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="project">
+                <div class="project-image"></div>
+                <h3>Project 1: E-commerce Platform</h3>
+                <p>A fully responsive e-commerce website with user authentication, product catalog, and secure payment integration.</p>
+                <div class="project-tags">
+                    <span class="project-tag">React</span>
+                    <span class="project-tag">Node.js</span>
+                    <span class="project-tag">MongoDB</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+            <div class="project">
+                <div class="project-image"></div>
+                <h3>Project 2: Task Management App</h3>
+                <p>A collaborative task management application with real-time updates, user roles, and project analytics.</p>
+                <div class="project-tags">
+                    <span class="project-tag">Vue.js</span>
+                    <span class="project-tag">Express</span>
+                    <span class="project-tag">PostgreSQL</span>
+                </div>
+                <div class="project-links">
+                    <a href="#" target="_blank">Live Demo</a>
+                    <a href="#" target="_blank">GitHub Repo</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Me</h2>
+            <p>Email: david.sundt@example.com</p>
+            <p>LinkedIn: linkedin.com/in/davidsundt</p>
+            <p>GitHub: github.com/davidsundt</p>
+        </section>
+    </div>
+
+    <footer>
+        <div class="background-animation"></div>
+        <p>&copy; 2024 David Sundt. All rights reserved.</p>
+    </footer>
+</body>
+</html>
